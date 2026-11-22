@@ -1,0 +1,35 @@
+{
+  "name": "fournil",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "db:migrate": "wrangler d1 migrations apply fournil --local",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler d1 migrations apply fournil --remote && wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc -b --noEmit",
+    "create-account": "node scripts/create-account.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.13.20",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.70.1",
+    "@cloudflare/workers-types": "^5.20261121.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.166.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
