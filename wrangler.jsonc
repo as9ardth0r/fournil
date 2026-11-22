@@ -1,14 +1,38 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "fournil",
-  "main": "src/worker/index.ts",
-  "compatibility_date": "2026-11-01",
-  "compatibility_flags": ["nodejs_compat"],
-  "assets": { "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
-  "d1_databases": [
-    { "binding": "DB", "database_name": "fournil", "database_id": "REMPLACER_PAR_ID_D1", "migrations_dir": "migrations" }
-  ],
-  // Nettoyage nocturne des boulangeries de démonstration
-  "triggers": { "crons": ["0 3 * * *"] },
-  "observability": { "enabled": true }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "fournil",
+	"main": "src/worker/index.ts",
+	"compatibility_date": "2026-11-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"assets": {
+		"not_found_handling": "single-page-application",
+		"run_worker_first": [
+			"/api/*"
+		]
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "fournil",
+			"database_id": "",
+			"migrations_dir": "migrations"
+		},
+		{
+			"binding": "fournil",
+			"database_name": "fournil",
+			"database_id": "f7f221dd-1d4a-4ab6-9aa3-116c9d4f824f",
+			"remote": true
+		}
+	],
+	// Nettoyage nocturne des boulangeries de démonstration
+	"triggers": {
+		"crons": [
+			"0 3 * * *"
+		]
+	},
+	"observability": {
+		"enabled": true
+	}
 }
