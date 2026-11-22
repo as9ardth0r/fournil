@@ -3,7 +3,7 @@
 > Fiches techniques, coût de revient, marges et allergènes INCO.
 > Le beurre augmente ? Fournil vous dit tout de suite quels produits ne sont plus rentables.
 
-**[▶ Essayer la démo](https://fournil.as9ardth0r.workers.dev)** · une boulangerie fictive est créée rien que pour vous, avec 8 produits et 17 recettes.
+**[▶ Essayer la démo](https://fournil.broutinjoelalain.workers.dev)** · une boulangerie fictive est créée rien que pour vous, avec 8 produits et 17 recettes.
 
 ![Tableau de bord](docs/tableau-de-bord.jpg)
 
